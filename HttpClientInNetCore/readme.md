@@ -8,3 +8,18 @@ By Kevinb Dockx
 
 ## HttpClientFactory
 
+## Creating DTO's
+* Create shared project with models
+* or link to models from client app
+* or use Swagger CodeGen ( java based )
+* or online editor.swagger.io
+*** or NSwagStudio
+* Add REST API client ( not yet .net core )
+
+HttpClient
+HttpRequestMessage
+HttpResponseMessage
+HttpMessageHandler, default HttpClientHandler
+
+
+
