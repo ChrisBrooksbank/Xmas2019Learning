@@ -27,7 +27,7 @@ Multi threading means a single CPU or CPU core can execute multiple threads conc
 
 Concurrency is a condition that exists when at least two threads are making progress.
 
-Parralelism means that at least two threads are excuting simulataneously. Achieved on API if webserver has a multi core processor.
+Parallelism means that at least two threads are excuting simulataneously. Achieved on API if webserver has a multi core processor.
 
 ### Data access layer
 Start at the bottom with your data access layer
@@ -175,9 +175,9 @@ Catch OperationCancelledException which exposes the CancellationToken.
 [Clip](https://app.pluralsight.com/course-player?clipId=11580530-8b04-44f4-ba2d-887a7034050c)
 
 e.g.
-* Dont wrap synchronous, computational bound, code with async methods
-* Dont block async code
-* Dont modify shared state
+* Dont wrap synchronous, computational bound, code with async methods. Await is optimised for I/O bound work, not computational bound.
+* Dont block async code, e.g. by returning Task.Result from a method, or calling .Wait() on task.
+* Dont modify shared state, its not threadsafe and can cause difficult to detect bugs.
 
 ## Further information
 
